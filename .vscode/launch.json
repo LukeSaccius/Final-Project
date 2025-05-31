@@ -1,0 +1,65 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "runClient",
+      "request": "launch",
+      "mainClass": "net.minecraftforge.bootstrap.ForgeBootstrap",
+      "projectName": "Forge-Tutorial-1.21.X",
+      "cwd": "${workspaceFolder}\\run",
+      "vmArgs": "-Dforge.logging.console.level\u003ddebug -Dforge.logging.markers\u003dREGISTRIES -Dforge.enabledGameTestNamespaces\u003dtutorialmod -Dforge.enableGameTest\u003dtrue -Djava.net.preferIPv6Addresses\u003dsystem -XX:HeapDumpPath\u003dMojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump",
+      "args": "--launchTarget forge_userdev_client --version MOD_DEV --assetIndex 18 --assetsDir C:\\Users\\Administrator\\.gradle\\caches\\forge_gradle\\assets --gameDir .",
+      "env": {
+        "MOD_CLASSES": "${workspaceFolder}\\build\\sourcesSets\\main",
+        "MCP_MAPPINGS": "parchment_2024.12.07-1.21.3"
+      },
+      "preLaunchTask": "prepareRunClientCompile"
+    },
+    {
+      "type": "java",
+      "name": "runData",
+      "request": "launch",
+      "mainClass": "net.minecraftforge.bootstrap.ForgeBootstrap",
+      "projectName": "Forge-Tutorial-1.21.X",
+      "cwd": "${workspaceFolder}\\run-data",
+      "vmArgs": "-Dforge.logging.console.level\u003ddebug -Dforge.logging.markers\u003dREGISTRIES -Djava.net.preferIPv6Addresses\u003dsystem",
+      "args": "--launchTarget forge_userdev_data --assetIndex 18 --assetsDir C:\\Users\\Administrator\\.gradle\\caches\\forge_gradle\\assets --gameDir . --mod tutorialmod --all --output \"D:\\Knox College\\CS220\\Final Project\\Forge-Tutorial-1.21.X\\src\\generated\\resources\" --existing \"D:\\Knox College\\CS220\\Final Project\\Forge-Tutorial-1.21.X\\src\\main\\resources\"",
+      "env": {
+        "MOD_CLASSES": "${workspaceFolder}\\build\\sourcesSets\\main",
+        "MCP_MAPPINGS": "parchment_2024.12.07-1.21.3"
+      },
+      "preLaunchTask": "prepareRunDataCompile"
+    },
+    {
+      "type": "java",
+      "name": "runGameTestServer",
+      "request": "launch",
+      "mainClass": "net.minecraftforge.bootstrap.ForgeBootstrap",
+      "projectName": "Forge-Tutorial-1.21.X",
+      "cwd": "${workspaceFolder}\\run",
+      "vmArgs": "-Dforge.logging.console.level\u003ddebug -Dforge.logging.markers\u003dREGISTRIES -Dforge.enabledGameTestNamespaces\u003dtutorialmod -Djava.net.preferIPv6Addresses\u003dsystem",
+      "args": "--launchTarget forge_userdev_server_gametest --gameDir .",
+      "env": {
+        "MOD_CLASSES": "${workspaceFolder}\\build\\sourcesSets\\main",
+        "MCP_MAPPINGS": "parchment_2024.12.07-1.21.3"
+      },
+      "preLaunchTask": "prepareRunGameTestServerCompile"
+    },
+    {
+      "type": "java",
+      "name": "runServer",
+      "request": "launch",
+      "mainClass": "net.minecraftforge.bootstrap.ForgeBootstrap",
+      "projectName": "Forge-Tutorial-1.21.X",
+      "cwd": "${workspaceFolder}\\run",
+      "vmArgs": "-Dforge.logging.console.level\u003ddebug -Dforge.logging.markers\u003dREGISTRIES -Dforge.enabledGameTestNamespaces\u003dtutorialmod -Dforge.enableGameTest\u003dtrue -Djava.net.preferIPv6Addresses\u003dsystem",
+      "args": "--launchTarget forge_userdev_server --gameDir . --nogui",
+      "env": {
+        "MOD_CLASSES": "${workspaceFolder}\\build\\sourcesSets\\main",
+        "MCP_MAPPINGS": "parchment_2024.12.07-1.21.3"
+      },
+      "preLaunchTask": "prepareRunServerCompile"
+    }
+  ]
+}

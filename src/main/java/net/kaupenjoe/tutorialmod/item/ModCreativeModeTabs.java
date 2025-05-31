@@ -11,10 +11,11 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModCreativeModeTabs {
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
-            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, TutorialMod.MOD_ID);
+    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister
+            .create(Registries.CREATIVE_MODE_TAB, TutorialMod.MOD_ID);
 
-    public static final RegistryObject<CreativeModeTab> ALEXANDRITE_ITEMS_TAB = CREATIVE_MODE_TABS.register("alexanderite_items_tab",
+    public static final RegistryObject<CreativeModeTab> ALEXANDRITE_ITEMS_TAB = CREATIVE_MODE_TABS.register(
+            "alexanderite_items_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.ALEXANDRITE.get()))
                     .title(Component.translatable("creativetab.tutorialmod.alexandrite_items"))
                     .displayItems((itemDisplayParameters, output) -> {
@@ -48,16 +49,18 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.KOHLRABI_SEEDS.get());
                         output.accept(ModItems.HONEY_BERRIES.get());
 
+                        output.accept(ModItems.SWIFTNESS_BERRY.get());
+                        output.accept(ModItems.ENCHANTED_SWIFTNESS_BERRY.get());
+
                         output.accept(ModItems.TOMAHAWK.get());
                         output.accept(ModItems.RADIATION_STAFF.get());
 
-
                         output.accept(ModItems.TRICERATOPS_SPAWN_EGG.get());
-
 
                     }).build());
 
-    public static final RegistryObject<CreativeModeTab> ALEXANDRITE_BLOCKS_TAB = CREATIVE_MODE_TABS.register("alexanderite_blocks_tab",
+    public static final RegistryObject<CreativeModeTab> ALEXANDRITE_BLOCKS_TAB = CREATIVE_MODE_TABS.register(
+            "alexanderite_blocks_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.ALEXANDRITE_BLOCK.get()))
                     .withTabsBefore(ALEXANDRITE_ITEMS_TAB.getId())
                     .title(Component.translatable("creativetab.tutorialmod.alexandrite_blocks"))
@@ -99,9 +102,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.PEDESTAL.get());
                         output.accept(ModBlocks.GROWTH_CHAMBER.get());
 
-
                     }).build());
-
 
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TABS.register(eventBus);

@@ -34,6 +34,9 @@
   "item.tutorialmod.kohlrabi_seeds": "Kohlrabi Seeds",
   "item.tutorialmod.honey_berries": "Honey Berries",
 
+  "item.tutorialmod.swiftness_berry": "Swiftness Berry",
+  "item.tutorialmod.enchanted_swiftness_berry": "Enchanted Swiftness Berry",
+
   "item.tutorialmod.triceratops_spawn_egg": "Triceratops Spawn Egg",
   "item.tutorialmod.tomahawk": "Tomahawk",
 
@@ -112,5 +115,10 @@
   "trim_material.tutorialmod.alexandrite": "Alexandrite Material",
 
   "entity.tutorialmod.triceratops": "Triceratops",
-  "entity.tutorialmod.tomahawk": "Tomahawk"
+  "entity.tutorialmod.tomahawk": "Tomahawk",
+
+  "key.category.tutorialmod.sword_soaring": "Sword Soaring",
+  "key.tutorialmod.flight": "Toggle Sword Flight",
+
+  "creativetabs.tutorial_tab": "Tutorial Tab"
 }
